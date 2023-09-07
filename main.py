@@ -42,7 +42,7 @@ async def price():
         # Forecast the next day's price
         forecasted_value_next_day = model_fit.forecast(steps=1).iloc[0]
         
-        return {"ticker": ticker_symbol, "forecasted_price": float(forecasted_value_next_day)}
+        return {"forecasted_price": float(forecasted_value_next_day)}
 
     except Exception as e:
         return {"error": str(e)}
