@@ -23,7 +23,7 @@ app = FastAPI()
 async def price():
     try:        
         # Define the ticker symbol of the stock you want to fetch data for
-        ticker_symbol = 'AAPL'
+        ticker_symbol = '^SPX'
         
         # Create a Yahoo Finance ticker object
         stock = yf.Ticker(ticker_symbol)
